@@ -1,7 +1,7 @@
 import React from "react"
 import { View, 
         StyleSheet, 
-        Text 
+        Text, 
     } from 'react-native'
 
     const styles = StyleSheet.create({
@@ -13,16 +13,16 @@ import { View,
             alignItems: 'flex-end'
         },
         displayValue: {
-            fontSize: 20,
+            fontSize: 60,
             color: '#fff'
         }
     })
 
-    export default props => {
+    export default props => 
         <View style={styles.display}>
             <Text style={styles.displayValue}
             numberOfLines={1}>
-                { props.value }
+                {props.value}
             </Text>
         </View>
-    }
+    

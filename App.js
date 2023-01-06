@@ -12,7 +12,7 @@ const intialState = {
 }
 
 export default class App extends Component {
-  state = {...intialState}
+  state = { ...intialState }
 
   addDig = n => {
     const clearDisplay = this.state.displayValue === '0'
@@ -64,7 +64,8 @@ export default class App extends Component {
   }
 
   render() {
-    <SafeAreaView style={styles.container}>
+    return (
+    <View style={styles.container}>
       <Display value={this.state.displayValue} />
       <View style={styles.buttons}>
         <Buttons label='AC' triple onClick={this.clearMemory} />
@@ -81,10 +82,12 @@ export default class App extends Component {
         <Buttons label='2' onClick={this.addDig} />
         <Buttons label='3' onClick={this.addDig} />
         <Buttons label='+' operation onClick={this.setOperation} />
+        <Buttons label='0' double onClick={this.addDig} />
         <Buttons label='.' onClick={this.addDig} />
         <Buttons label='=' operation onClick={this.setOperation} />
       </View>
-    </SafeAreaView>
+    </View>
+    )
   }
 }
 

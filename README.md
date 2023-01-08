@@ -5,3 +5,6 @@ Plataforma suportada em iOS e Android.
 Usei expo para simulação do celular.
 
 ![Demo](./assets/Screenshot%202023-01-08%2013.50.18.png)
+
+# Referência
+- `ReactNativeSchool` - [ReactNativeSchool](https://github.com/ReactNativeSchool)

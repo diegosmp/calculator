@@ -8,3 +8,4 @@ Usei expo para simulação do celular.
 
 # Referência
 - `ReactNativeSchool` - [ReactNativeSchool](https://github.com/ReactNativeSchool)
+- `Código original` - [ReactNativeSchool](https://github.com/ReactNativeSchool/react-native-calculator) 

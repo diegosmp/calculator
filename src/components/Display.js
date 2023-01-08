@@ -7,9 +7,8 @@ import { View,
     const styles = StyleSheet.create({
         display: {
             flex: 1,
-            justifyContent: 'center',
+            justifyContent: 'flex-end',
             // backgroundColor: 'rgba(0,0,0,0.6)', //Mudar cor do fundo do Display
-            alignItems: 'flex-end'
         },
         displayValue: {
             fontSize: 40,

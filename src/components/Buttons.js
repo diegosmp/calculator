@@ -7,24 +7,30 @@ import { StyleSheet,
 
         const styles = StyleSheet.create({
             button: {
-                fontSize: 40,
-                height: Dimensions.get('window').width / 4,
-                width: Dimensions.get('window').width / 4,
-                padding: 20,
-                backgroundColor: '#f0f0f0',
+                fontSize: 25,
+                height: Math.floor((Dimensions.get('window').width / 4) - 10),
+                width: Math.floor(Dimensions.get('window').width / 4 - 10),
+                borderRadius: Math.floor(Dimensions.get('window').width / 4),
+                margin: 5,
+                padding: 25,
+                backgroundColor: '#333333',
+                color: '#fff',
                 textAlign: 'center',
-                borderWidth: 1,
-                borderColor: '#888',
+                justifyContent: 'center',
+                alignContent: 'center',
             },
             operationButton: {
                 color: '#fff',
-                backgroundColor: '#ffad00',
+                backgroundColor: '#f09a36',
             },
             buttonDouble: {
-                width: (Dimensions.get('window').width / 4) * 2
+                width: Math.floor((Dimensions.get('window').width / 4) * 2) - 10
             },
-            buttonTriple: {
-                width: (Dimensions.get('window').width / 4) * 3
+            buttonSecondary: {
+                backgroundColor: '#a6a6a6'
+            },
+            textSecondary: {
+                color: '#060606'
             }
         })
 
@@ -33,6 +39,8 @@ import { StyleSheet,
             if (props.double) stylesButton.push(styles.buttonDouble)
             if (props.triple) stylesButton.push(styles.buttonTriple)
             if (props.operation) stylesButton.push(styles.operationButton)
+            if (props.operation2) stylesButton.push(styles.buttonSecondary)
+            if (props.textSecond) stylesButton.push(styles.textSecondary)
 
             return (
                 <TouchableHighlight onPress={() => props.onClick(props.label)}>

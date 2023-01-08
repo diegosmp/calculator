@@ -18,7 +18,7 @@ import { StyleSheet,
             },
             operationButton: {
                 color: '#fff',
-                backgroundColor: '#48279a',
+                backgroundColor: '#ffad00',
             },
             buttonDouble: {
                 width: (Dimensions.get('window').width / 4) * 2

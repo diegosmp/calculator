@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Display from './src/components/Display'
 import Buttons from './src/components/Buttons'
+import { StatusBar } from 'expo-status-bar';
 
 const intialState = {
   displayValue: '0',
@@ -63,14 +64,33 @@ export default class App extends Component {
     }
   }
 
+  operationTap = type => {
+    this.setState(state => this.setPorcentage(type, state))
+  }
+
+    setPorcentage = (type, state) => { 
+      switch(type) {
+        case "negativeNumber":
+        return {
+          displayValue: `${parseFloat(this.state.displayValue) * -1}`
+        }
+        case "porcetage":
+          return {
+          displayValue: `${parseFloat(this.state.displayValue) * 0.01}`  
+          }
+          default:
+            return state
+      }
+    }
+
   render() {
     return (
     <View style={styles.container}>
       <Display value={this.state.displayValue} />
       <View style={styles.buttons}>
         <Buttons label='C' operation2 textSecond onClick={this.clearMemory} />
-        <Buttons label='+/-' operation2 textSecond onClick={this.clearMemory} />
-        <Buttons label='%' operation2 textSecond onClick={this.clearMemory} />
+        <Buttons label='+/-' operation2 textSecond onClick={() => this.operationTap('negativeNumber')} />
+        <Buttons label='%' operation2 textSecond onClick={() => this.operationTap("porcetage")} />
         <Buttons label='/' operation onClick={this.setOperation} />
         <Buttons label='7' onClick={this.addDig} />
         <Buttons label='8' onClick={this.addDig} />

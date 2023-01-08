@@ -7,7 +7,7 @@ import { StyleSheet,
 
         const styles = StyleSheet.create({
             button: {
-                fontSize: 25,
+                fontSize: 30,
                 height: Math.floor((Dimensions.get('window').width / 4) - 10),
                 width: Math.floor(Dimensions.get('window').width / 4 - 10),
                 borderRadius: Math.floor(Dimensions.get('window').width / 4),
